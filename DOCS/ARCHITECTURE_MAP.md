@@ -13,3 +13,4 @@ Sem endpoints/schemas. Dependência: Pillow.
 Sem build, sem dependências.
 - `DOCS/README_STANDARD.md` — padrão de README bilíngue (EN + PT no mesmo arquivo) para repos públicos da org.
 - `DOCS/PROJECT_PAGE_STANDARD.md` — padrão do `DUNGEON.md` que cada repo da org usa para montar seu card em Quests. `script.js` (`PROJECTS` + `parseDungeon`) renderiza os cards, com descoberta automática dos repos públicos via API do GitHub e `DUNGEON.md` remoto sobrescrevendo o fallback local. `index.html` tem `<meta name="google" content="notranslate">` (o site já é bilíngue) e CSS/JS com `?v=N` para cache-bust (incrementar a cada mudança).
+- Caminhos de imagem: no `script.js`, `./assets/...` = arquivo do próprio site (fallback); qualquer outro caminho vem do repo do projeto (`raw.githubusercontent.com/DungeonDevLabs/<repo>/HEAD/<caminho>`).
