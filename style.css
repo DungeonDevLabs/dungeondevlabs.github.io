@@ -45,10 +45,14 @@ h2::before{content:"▸ ";color:var(--cyan)}
 .pix{font-size:1.6rem;color:var(--violet)}
 .chips{display:flex;gap:10px;flex-wrap:wrap}
 .chip{font:400 .75rem Silkscreen,monospace;padding:5px 10px;border:1px solid var(--line);border-radius:6px;color:var(--mint);background:var(--surface)}
-.portal-wrap{margin:0}.portal-wrap figcaption,.note{display:block;text-align:center;color:var(--muted);font-size:.75rem;margin-top:12px}
-.note{margin:6px 0 12px;text-align:left}
-.card{display:block}
-.dragons{display:flex;gap:8px;margin-top:6px}.dragons img{width:25%;image-rendering:pixelated;background:var(--bg);border-radius:8px}
+.portal-wrap{margin:0;justify-self:center;width:min(100%,400px);text-align:center}
+.portal-wrap figcaption{display:inline-block;margin-top:16px;padding:4px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--muted);font-size:.75rem}
+.card{display:flex;flex-direction:column;gap:2px}
+.card .chips{margin-top:auto;padding-top:14px}
+.previews{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:2px 0 6px}
+.previews img{width:100%;aspect-ratio:1;object-fit:contain;image-rendering:pixelated;background:var(--bg);border-radius:8px;padding:4px}
+.note{color:var(--muted);font-size:.72rem}
+.chip.status{color:var(--cyan)}
 .logo-full{display:block;margin:0 auto 20px;background:#05070f;border-radius:16px;padding:8px;image-rendering:pixelated}
 footer p{max-width:60ch;margin:6px auto}
 footer{text-align:center;color:var(--muted);padding:40px 5vw;border-top:1px solid var(--line);font-size:.85rem}
