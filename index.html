@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dungeon Dev Labs</title>
+<meta name="description" content="Code, game-dev and pixels. Unleashing digital magic from the depths.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home"><img src="assets/logo.png" alt="" width="32" height="32"><span>Dungeon Dev Labs</span></a>
+  <nav>
+    <a href="#home" class="on">Home</a><a href="#forge">The Forge</a><a href="#quests">Quests</a><a href="#arsenal">Arsenal</a><a href="#guild">Guild</a>
+  </nav>
+  <button id="theme" class="icon-btn" aria-label="Toggle theme">◐</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-text">
+    <span class="tag">[ CODE | GAME-DEV | PIXELS ]</span>
+    <h1>Unleashing digital magic from the <em>depths</em>.</h1>
+    <p>Software, games and pixel art forged in a cozy dungeon lab. Modern craft, 8-bit soul.</p>
+    <div class="cta">
+      <a class="btn primary" href="#quests">Enter the Lab</a>
+      <a class="btn" href="#guild">Summon Us</a>
+    </div>
+  </div>
+  <div class="portal"><img src="assets/home_img.png" alt="Pixel-art wizard writing code beside a sleeping spirit wolf"></div>
+</section>
+
+<section id="forge" class="sec">
+  <h2>The Forge</h2>
+  <p class="lead">Where ideas are hammered into working things: web apps, tools and small games, built in the open.</p>
+</section>
+
+<section id="quests" class="sec">
+  <h2>Active Quests / Projects</h2>
+  <div class="grid">
+    <article class="card"><span class="pix">▣</span><h3>Dungeon Manager</h3><p>Manage your adventures, one dungeon at a time.</p><span class="chip">in progress</span></article>
+    <article class="card"><span class="pix">⚔</span><h3>Quest Board</h3><p>A tiny board to track tasks like quests.</p><span class="chip">planned</span></article>
+    <article class="card"><span class="pix">✦</span><h3>Pixelart Tool</h3><p>Turn any image into palette-limited pixel art.</p><span class="chip">shipped</span></article>
+  </div>
+</section>
+
+<section id="arsenal" class="sec">
+  <h2>Arsenal</h2>
+  <div class="chips"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">HTML/CSS</span><span class="chip">Pixel art</span><span class="chip">Game dev</span></div>
+</section>
+
+<section id="guild" class="sec">
+  <h2>Guild</h2>
+  <p class="lead">Want to join the party? Find us on GitHub.</p>
+  <a class="btn primary" href="https://github.com/DungeonDevLabs">github.com/DungeonDevLabs</a>
+</section>
+</main>
+
+<footer>© <span id="y"></span> Dungeon Dev Labs · made with ♥ and pixels</footer>
+<script src="script.js"></script>
+</body>
+</html>
