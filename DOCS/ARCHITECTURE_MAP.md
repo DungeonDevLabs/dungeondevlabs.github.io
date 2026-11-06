@@ -11,4 +11,5 @@ Sem endpoints/schemas. Dependência: Pillow.
 - `script.js` — dicionário i18n EN/PT-BR (idioma inicial por `navigator.language`, botão EN/PT persiste em localStorage `lang`), toggle de tema e ano do rodapé. Novo texto: adicionar a chave nos dois idiomas.
 - `.gitignore` — ignora `__pycache__`, editores e `assets/*_draft*.png`.
 Sem build, sem dependências.
+- `DOCS/README_STANDARD.md` — padrão de README bilíngue (EN + PT no mesmo arquivo) para repos públicos da org.
 - `DOCS/PROJECT_PAGE_STANDARD.md` — padrão do `DUNGEON.md` que cada repo da org usa para montar seu card em Quests. `script.js` (`PROJECTS` + `parseDungeon`) renderiza os cards, com `DUNGEON.md` remoto sobrescrevendo o fallback local. `index.html` tem `<meta name="google" content="notranslate">` (o site já é bilíngue) e CSS/JS com `?v=N` para cache-bust (incrementar a cada mudança).

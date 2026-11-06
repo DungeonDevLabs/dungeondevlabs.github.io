@@ -1,5 +1,7 @@
 # Padrão de página de projeto (DUNGEON.md)
 
+Veja também [README_STANDARD.md](README_STANDARD.md).
+
 Cada repositório da org que aparece em **Quests / Projects** na home deve ter um `DUNGEON.md` na raiz.
 O site lê `https://raw.githubusercontent.com/DungeonDevLabs/<repo>/HEAD/DUNGEON.md` e monta o card; se o arquivo não existir, usa os dados de fallback em `script.js` (`PROJECTS`).
 Para um repo novo aparecer, adicione `{ repo, name, ... }` em `PROJECTS` (o `DUNGEON.md` sobrescreve o resto).
