@@ -6,7 +6,7 @@
 Sem endpoints/schemas. Dependência: Pillow.
 
 ## Home page (GitHub Pages: dungeondevlabs.github.io, repo DungeonDevLabs/dungeondevlabs.github.io)
-- `index.html` — página estática única (Home/hero, The Forge, Quests, Arsenal, Guild). Textos com `data-i18n`/`data-i18n-html`. Cards de Quests baseados nos repos da org (Vision, ThirdEye, este site). Rodapé: `assets/logo-completa.png` + aviso de imagens geradas por IA / IAs como copilotos de desenvolvimento. Assets: `home_img.png`, `logo.png` (favicon), `dragons/*.gif` (copiados de DungeonDevLabs/Vision/gallery).
+- `index.html` — página estática única (Home/hero, The Forge, Quests, Arsenal). Textos com `data-i18n`/`data-i18n-html`. Cards de Quests baseados nos repos da org (Vision, ThirdEye, este site). Rodapé: `assets/logo-completa.png` + aviso de imagens geradas por IA / IAs como copilotos de desenvolvimento. Assets: `home_img.png`, `logo.png` (favicon), `dragons/*.gif` (copiados de DungeonDevLabs/Vision/gallery).
 - `style.css` — paleta em variáveis CSS `:root` (void/bg/surface/line, indigo, violet, cyan, mint; extraída do logo) + tema claro via `[data-theme="light"]`. Fontes: Inter (texto), Press Start 2P e Silkscreen (toques pixel).
 - `script.js` — dicionário i18n EN/PT-BR (idioma inicial por `navigator.language`, botão EN/PT persiste em localStorage `lang`), toggle de tema e ano do rodapé. Novo texto: adicionar a chave nos dois idiomas.
 - `.gitignore` — ignora `__pycache__`, editores e `assets/*_draft*.png`.
