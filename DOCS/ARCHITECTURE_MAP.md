@@ -5,7 +5,7 @@
 
 Sem endpoints/schemas. Dependência: Pillow.
 
-## Home page (GitHub Pages: dungeondevlabs.github.io, repo DungeonDevLabs/Home)
+## Home page (GitHub Pages: dungeondevlabs.github.io, repo DungeonDevLabs/dungeondevlabs.github.io)
 - `index.html` — página estática única (seções: Home/hero, The Forge, Quests, Arsenal, Guild). Usa `assets/logo.png` e `assets/home_img.png`.
 - `style.css` — paleta em variáveis CSS `:root` (void/bg/surface/line, indigo, violet, cyan, mint; extraída do logo) + tema claro via `[data-theme="light"]`. Fontes: Inter (texto), Press Start 2P e Silkscreen (toques pixel).
 - `script.js` — toggle de tema (persistido em localStorage) e ano do rodapé.
