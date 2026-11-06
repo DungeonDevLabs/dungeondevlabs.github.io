@@ -36,6 +36,7 @@ h2::before{content:"▸ ";color:var(--cyan)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.2s}
 .card:hover{border-color:var(--cyan);transform:translateY(-3px);box-shadow:var(--glow)}
 .card h3{margin:10px 0 6px}.card p{color:var(--muted);margin:0 0 14px;font-size:.92rem}
+.pix-img{display:block;width:40px;height:40px;object-fit:contain;border-radius:8px}
 .pix{font-size:1.6rem;color:var(--violet)}
 .chips{display:flex;gap:10px;flex-wrap:wrap}
 .chip{font:400 .75rem Silkscreen,monospace;padding:5px 10px;border:1px solid var(--line);border-radius:6px;color:var(--mint);background:var(--surface)}

@@ -27,7 +27,7 @@ Texto livre (não aparece na home): notas, links, roadmap.
 
 ## Regras
 - Front matter entre `---`, uma linha `chave: valor` por campo. **Sem listas YAML**: `tags` e `preview` são separados por vírgula.
-- `name`: nome exibido. `icon`: um emoji. `status`: texto curto livre (ex.: `in progress`, `shipped`) — opcional.
+- `name`: nome exibido. `icon`: caminho de uma imagem no repo (`png`, `svg`, `gif`, `webp`, `jpg`; ex.: `assets/icon.png`, quadrada) **ou** um emoji. Com imagem, ela é usada no lugar do emoji. `status`: texto curto livre (ex.: `in progress`, `shipped`) — opcional.
 - `summary_en` / `summary_pt`: obrigatórios, uma frase cada.
 - `tags`: até 4. `preview`: até 4 imagens/GIFs, caminhos relativos à raiz do repo (quadradas, pixel art) — opcional.
 - `privacy_en` / `privacy_pt`: caminho (relativo à raiz do repo) da política de privacidade em cada idioma. **Todo app publicado na Play Store deve ter** (a loja exige o link). Se o repo só tem uma versão, preencha só o campo existente. Ex.: Vision usa `privacy.md` / `privacidade.md`; ThirdEye usa `public/politica-de-privacidade.md`. A URL pública é `https://github.com/DungeonDevLabs/<repo>/blob/main/<caminho>`. Por enquanto o campo é só documentação: a home ainda não exibe esse link.

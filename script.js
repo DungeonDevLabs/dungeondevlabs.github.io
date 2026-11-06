@@ -49,11 +49,21 @@ function parseDungeon(text) {
 }
 
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; };
+const IMG_EXT = /\.(png|svg|gif|webp|jpe?g)$/i;
+// `icon` in DUNGEON.md: an image path in the repo (used as image) or an emoji.
+function iconEl(p) {
+  if (p.icon && IMG_EXT.test(p.icon)) {
+    const i = el("img", "pix-img"); i.alt = ""; i.loading = "lazy";
+    i.src = /^(https:\/\/raw\.githubusercontent\.com\/|assets\/)/.test(p.icon) ? p.icon : RAW(p.repo, p.icon);
+    return i;
+  }
+  return el("span", "pix", p.icon || "◆");
+}
 function renderProjects() {
   const grid = document.getElementById("projects");
   grid.replaceChildren(...PROJECTS.map(p => {
     const a = el("a", "card"); a.href = `https://github.com/${ORG}/${p.repo}`; a.target = "_blank"; a.rel = "noopener";
-    a.append(el("span", "pix", p.icon || "◆"), el("h3", "", p.name), el("p", "", p[lang] || p.en || ""));
+    a.append(iconEl(p), el("h3", "", p.name), el("p", "", p[lang] || p.en || ""));
     if (p.preview.length) {
       const d = el("div", "previews");
       p.preview.slice(0, 4).forEach(src => { const i = el("img"); i.alt = ""; i.loading = "lazy";
