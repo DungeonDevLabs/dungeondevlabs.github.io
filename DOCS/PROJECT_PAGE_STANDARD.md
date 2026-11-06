@@ -4,7 +4,7 @@ Veja também [README_STANDARD.md](README_STANDARD.md).
 
 Cada repositório da org que aparece em **Quests / Projects** na home deve ter um `DUNGEON.md` na raiz.
 O site lê `https://raw.githubusercontent.com/DungeonDevLabs/<repo>/HEAD/DUNGEON.md` e monta o card; se o arquivo não existir, usa os dados de fallback em `script.js` (`PROJECTS`).
-Para um repo novo aparecer, adicione `{ repo, name, ... }` em `PROJECTS` (o `DUNGEON.md` sobrescreve o resto).
+Repos públicos novos da org aparecem sozinhos: o site lista `api.github.com/orgs/DungeonDevLabs/repos` (ignora forks, arquivados e o próprio repo do site). Sem `DUNGEON.md`, o card usa nome, descrição e linguagem do GitHub; com ele, vale o que está no arquivo. `PROJECTS` em `script.js` guarda só ícone/imagens de fallback e é o que aparece se a API falhar (limite de 60 requisições/h por IP).
 
 ## Template (copie para a raiz do repo)
 

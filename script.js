@@ -68,11 +68,19 @@ function renderProjects() {
     return a;
   }));
 }
-PROJECTS.forEach(p => fetch(RAW(p.repo, "DUNGEON.md")).then(r => r.ok ? r.text() : "").then(t => {
+const loadDungeon = p => fetch(RAW(p.repo, "DUNGEON.md")).then(r => r.ok ? r.text() : "").then(t => {
   const d = t && parseDungeon(t); if (!d) return;
   Object.keys(d).forEach(k => { if (d[k] && (!Array.isArray(d[k]) || d[k].length)) p[k] = d[k]; });
   renderProjects();
-}).catch(() => {}));
+}).catch(() => {});
+// Discovery: public org repos (no forks/archived, not this site). shortcut: unauthenticated API allows 60 req/h per visitor IP, on failure the PROJECTS fallback stays.
+fetch(`https://api.github.com/orgs/${ORG}/repos?type=public&per_page=100`).then(r => r.ok ? r.json() : Promise.reject()).then(repos => {
+  const live = repos.filter(r => !r.fork && !r.archived && r.name.toLowerCase() !== `${ORG}.github.io`.toLowerCase());
+  const known = Object.fromEntries(PROJECTS.map(p => [p.repo, p]));
+  PROJECTS.splice(0, PROJECTS.length, ...live.map(r => known[r.name] || { repo: r.name, name: r.name, tags: r.language ? [r.language] : [],
+    preview: [], en: r.description || "", pt: r.description || "" }));
+  renderProjects();
+}).catch(() => {}).finally(() => PROJECTS.forEach(loadDungeon));
 
 let lang = "en";
 try { lang = localStorage.getItem("lang") || ""; } catch (e) {}
